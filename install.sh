@@ -14,7 +14,22 @@ set -euo pipefail
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+CYAN='\033[0;36m'
 NC='\033[0m' # No Color
+
+# Show the datey banner
+echo -e "${CYAN}"
+cat << 'EOF'
+ ██████╗  █████╗ ████████╗███████╗██╗   ██╗
+ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝
+ ██║  ██║███████║   ██║   █████╗   ╚████╔╝
+ ██║  ██║██╔══██║   ██║   ██╔══╝    ╚██╔╝
+ ██████╔╝██║  ██║   ██║   ███████╗   ██║
+ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝
+EOF
+echo -e "${NC}"
+echo "A persistent clock for Claude Code"
+echo ""
 
 # Determine install location
 if [[ "${1:-}" == "--global" ]]; then
