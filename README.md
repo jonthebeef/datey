@@ -189,6 +189,12 @@ Contributions welcome! Feel free to:
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-## Acknowledgments
+## Spread the Word
 
-Built for the Claude Code community. If you find this useful, give it a star!
+If datey helped you, help others find it:
+
+- **Star this repo** - It helps others discover datey
+- **Share on socials** - Tag your post with `#claudecode` and `#vibecoding`
+- **Tell a friend** - Know someone frustrated by outdated Claude searches?
+
+Built for the Claude Code community by [@jonthebeef](https://github.com/jonthebeef)
