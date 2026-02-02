@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Backups created by install script
+*.backup
