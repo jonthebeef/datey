@@ -34,7 +34,7 @@ datey automatically:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/datey.git
+git clone https://github.com/jonthebeef/datey.git
 cd datey
 
 # Install to your current project
