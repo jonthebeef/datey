@@ -1,6 +1,19 @@
+```
+     _       _
+    | |     | |
+  __| | __ _| |_ ___ _   _
+ / _` |/ _` | __/ _ \ | | |
+| (_| | (_| | ||  __/ |_| |
+ \__,_|\__,_|\__\___|\__, |
+                      __/ |
+                     |___/
+```
+
 # datey
 
-A [Claude Code](https://claude.ai/code) hook that ensures web searches always include the current year, helping Claude find up-to-date information.
+**A persistent clock for Claude Code.**
+
+datey gives Claude access to your system's hardware clock, so it always knows what day it is. No more outdated search results. No more "as of my knowledge cutoff" confusion.
 
 ## The Problem
 
@@ -8,10 +21,11 @@ Claude's knowledge has a cutoff date, and when searching the web, it sometimes f
 
 ## The Solution
 
-datey automatically:
+datey hooks into Claude Code and reads the date directly from your system clock at runtime. This means:
 
-1. **Injects date context** at session start so Claude knows today's date
-2. **Appends the current year** to WebSearch queries (if not already present)
+1. **Session awareness** - Claude knows today's exact date the moment a session starts
+2. **Search accuracy** - Every web search automatically includes the current year
+3. **Always fresh** - The date comes from your hardware, not from training data
 
 ## Installation
 
@@ -83,6 +97,26 @@ If you prefer to install manually:
    ```bash
    chmod +x .claude/hooks/*.sh
    ```
+
+## Testing Your Installation
+
+After installing, verify datey is working:
+
+```bash
+# Start Claude Code with debug output
+claude --debug
+```
+
+You should see the hooks fire on startup. Then try a search:
+
+```
+search for the latest Next.js features
+```
+
+If datey is working, you'll see:
+- The **SessionStart hook** inject today's date into the session
+- The **PreToolUse hook** append the current year to your search query
+- Search results that are actually current, not from years ago
 
 ## How It Works
 
